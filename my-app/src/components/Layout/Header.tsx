@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import EnquiryForm from '../EnquiryForm';
 import GetInTouchButton from '../GetInTouchButton';
+import Link from 'next/link';
 
 interface props{
   setFormVisible:any;
@@ -16,7 +17,7 @@ const Header :React.FC <props>= ({setFormVisible,isFormVisible}) => {
           <nav className={'bg-transparent h-[110px]  w-95 '}>
             <div className={'flex items-center'}>
               <div className={'w-1/2 ml-4 flex flex-row relative cursor-pointer group items-center'}>
-                <a href='/'>
+                <Link href='/'>
                 <Image
                   src="/icons/SSA-logo.svg"
                   alt="logo image"
@@ -24,10 +25,11 @@ const Header :React.FC <props>= ({setFormVisible,isFormVisible}) => {
                   height={90}
                   className="mt-4  transform scale-75 transition-transform duration-300 group-hover:scale-100"
                 />
+
                 <span className="absolute ml-[4.5rem] mb-3 bottom-0 left-0 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   Sunny<br/> state<br/> Agency
                 </span>
-                </a>
+                </Link>
               </div>
               <div className={'w-1/2 flex  items-center mr-7 justify-around'}>
                 <a className='cursor-pointer'>WHO ARE WE</a>
